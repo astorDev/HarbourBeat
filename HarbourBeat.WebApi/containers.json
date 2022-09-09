@@ -1,0 +1,134 @@
+{
+  "version": "7.17.3",
+  "objects": [
+    {
+      "id": "containers",
+      "type": "dashboard",
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2022-09-02T14:55:00.811Z",
+      "version": "WzE0NzEsMV0=",
+      "attributes": {
+        "title": "Containers",
+        "hits": 0,
+        "description": "",
+        "panelsJSON": "[{\"version\":\"7.17.3\",\"type\":\"lens\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":15,\"i\":\"fef55d92-23ca-4b45-ac86-96cea19cfdfb\"},\"panelIndex\":\"fef55d92-23ca-4b45-ac86-96cea19cfdfb\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"visualizationType\":\"lnsXY\",\"type\":\"lens\",\"references\":[{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-layer-ccb2d247-4a37-418e-b9d1-cc5acdf90843\"}],\"state\":{\"visualization\":{\"legend\":{\"isVisible\":true,\"position\":\"right\"},\"valueLabels\":\"hide\",\"fittingFunction\":\"None\",\"yLeftExtent\":{\"mode\":\"full\"},\"yRightExtent\":{\"mode\":\"full\"},\"axisTitlesVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"tickLabelsVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"labelsOrientation\":{\"x\":0,\"yLeft\":0,\"yRight\":0},\"gridlinesVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"preferredSeriesType\":\"area_stacked\",\"layers\":[{\"layerId\":\"ccb2d247-4a37-418e-b9d1-cc5acdf90843\",\"accessors\":[\"1bd67254-ff54-47b9-ab48-cfeaea59241c\"],\"position\":\"top\",\"seriesType\":\"area_stacked\",\"showGridlines\":false,\"layerType\":\"data\",\"splitAccessor\":\"3490bdfd-b2b1-482d-be4c-b426827a34cc\",\"xAccessor\":\"d22fc699-5328-4a65-a023-b2bfbb7ce7e0\",\"palette\":{\"type\":\"palette\",\"name\":\"default\"}}]},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[],\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"ccb2d247-4a37-418e-b9d1-cc5acdf90843\":{\"columns\":{\"3490bdfd-b2b1-482d-be4c-b426827a34cc\":{\"label\":\"Top values of container.name\",\"dataType\":\"string\",\"operationType\":\"terms\",\"scale\":\"ordinal\",\"sourceField\":\"container.name\",\"isBucketed\":true,\"params\":{\"size\":50,\"orderBy\":{\"type\":\"column\",\"columnId\":\"1bd67254-ff54-47b9-ab48-cfeaea59241c\"},\"orderDirection\":\"desc\",\"otherBucket\":true,\"missingBucket\":false}},\"d22fc699-5328-4a65-a023-b2bfbb7ce7e0\":{\"label\":\"@timestamp\",\"dataType\":\"date\",\"operationType\":\"date_histogram\",\"sourceField\":\"@timestamp\",\"isBucketed\":true,\"scale\":\"interval\",\"params\":{\"interval\":\"auto\"}},\"1bd67254-ff54-47b9-ab48-cfeaea59241c\":{\"label\":\"Average cpu\",\"dataType\":\"number\",\"operationType\":\"average\",\"sourceField\":\"docker.cpu.total.pct\",\"isBucketed\":false,\"scale\":\"ratio\",\"params\":{\"format\":{\"id\":\"percent\",\"params\":{\"decimals\":2}}},\"customLabel\":true}},\"columnOrder\":[\"3490bdfd-b2b1-482d-be4c-b426827a34cc\",\"d22fc699-5328-4a65-a023-b2bfbb7ce7e0\",\"1bd67254-ff54-47b9-ab48-cfeaea59241c\"],\"incompleteColumns\":{}}}}}}},\"enhancements\":{}}},{\"version\":\"7.17.3\",\"type\":\"lens\",\"gridData\":{\"x\":24,\"y\":0,\"w\":10,\"h\":15,\"i\":\"d218eaea-3294-4f00-826a-dc4530b03fb0\"},\"panelIndex\":\"d218eaea-3294-4f00-826a-dc4530b03fb0\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"visualizationType\":\"lnsDatatable\",\"type\":\"lens\",\"references\":[{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-layer-7a36fdc4-48a7-4331-a93d-fec5f22b109b\"}],\"state\":{\"visualization\":{\"columns\":[{\"columnId\":\"d7949ef1-de00-4f2c-939e-2396d4051a21\",\"isTransposed\":false},{\"columnId\":\"3abdeef1-dc52-48a2-b444-03b7d9e30bc3\",\"isTransposed\":false}],\"layerId\":\"7a36fdc4-48a7-4331-a93d-fec5f22b109b\",\"layerType\":\"data\"},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[],\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"7a36fdc4-48a7-4331-a93d-fec5f22b109b\":{\"columns\":{\"d7949ef1-de00-4f2c-939e-2396d4051a21\":{\"label\":\"container\",\"dataType\":\"string\",\"operationType\":\"terms\",\"scale\":\"ordinal\",\"sourceField\":\"container.name\",\"isBucketed\":true,\"params\":{\"size\":50,\"orderBy\":{\"type\":\"column\",\"columnId\":\"3abdeef1-dc52-48a2-b444-03b7d9e30bc3\"},\"orderDirection\":\"desc\",\"otherBucket\":true,\"missingBucket\":false},\"customLabel\":true},\"3abdeef1-dc52-48a2-b444-03b7d9e30bc3\":{\"label\":\"cpu\",\"dataType\":\"number\",\"operationType\":\"average\",\"sourceField\":\"docker.cpu.total.pct\",\"isBucketed\":false,\"scale\":\"ratio\",\"params\":{\"format\":{\"id\":\"percent\",\"params\":{\"decimals\":2}}},\"customLabel\":true}},\"columnOrder\":[\"d7949ef1-de00-4f2c-939e-2396d4051a21\",\"3abdeef1-dc52-48a2-b444-03b7d9e30bc3\"],\"incompleteColumns\":{}}}}}}},\"enhancements\":{}}},{\"version\":\"7.17.3\",\"type\":\"lens\",\"gridData\":{\"x\":34,\"y\":0,\"w\":7,\"h\":15,\"i\":\"e46d5f7c-aeb0-4393-8764-69892861f96d\"},\"panelIndex\":\"e46d5f7c-aeb0-4393-8764-69892861f96d\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"visualizationType\":\"lnsMetric\",\"type\":\"lens\",\"references\":[{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-layer-f93f8442-af89-4545-a9fd-f35dd5b0ab6c\"}],\"state\":{\"visualization\":{\"layerId\":\"f93f8442-af89-4545-a9fd-f35dd5b0ab6c\",\"accessor\":\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2\",\"layerType\":\"data\"},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[],\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"f93f8442-af89-4545-a9fd-f35dd5b0ab6c\":{\"columns\":{\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X0\":{\"label\":\"Part of multiply(average(docker.cpu.total.pct), unique_count(container.name))\",\"dataType\":\"number\",\"operationType\":\"average\",\"sourceField\":\"docker.cpu.total.pct\",\"isBucketed\":false,\"scale\":\"ratio\",\"customLabel\":true},\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X1\":{\"label\":\"Part of multiply(average(docker.cpu.total.pct), unique_count(container.name))\",\"dataType\":\"number\",\"operationType\":\"unique_count\",\"scale\":\"ratio\",\"sourceField\":\"container.name\",\"isBucketed\":false,\"customLabel\":true},\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X2\":{\"label\":\"Part of multiply(average(docker.cpu.total.pct), unique_count(container.name))\",\"dataType\":\"number\",\"operationType\":\"math\",\"isBucketed\":false,\"scale\":\"ratio\",\"params\":{\"tinymathAst\":{\"type\":\"function\",\"name\":\"multiply\",\"args\":[\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X0\",\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X1\"],\"location\":{\"min\":0,\"max\":69},\"text\":\"multiply(average(docker.cpu.total.pct), unique_count(container.name))\"}},\"references\":[\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X0\",\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X1\"],\"customLabel\":true},\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2\":{\"label\":\"used cpu\",\"dataType\":\"number\",\"operationType\":\"formula\",\"isBucketed\":false,\"scale\":\"ratio\",\"params\":{\"formula\":\"multiply(average(docker.cpu.total.pct), unique_count(container.name))\",\"isFormulaBroken\":false,\"format\":{\"id\":\"percent\",\"params\":{\"decimals\":2}}},\"references\":[\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X2\"],\"customLabel\":true}},\"columnOrder\":[\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2\",\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X0\",\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X1\",\"b65f1975-7ef8-4ac2-b388-0d34daaa08b2X2\"],\"incompleteColumns\":{}}}}}}},\"enhancements\":{}}},{\"version\":\"7.17.3\",\"type\":\"lens\",\"gridData\":{\"x\":41,\"y\":0,\"w\":7,\"h\":15,\"i\":\"731da10b-0263-4035-9af6-4dfa2bac0191\"},\"panelIndex\":\"731da10b-0263-4035-9af6-4dfa2bac0191\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"visualizationType\":\"lnsMetric\",\"type\":\"lens\",\"references\":[{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-layer-4568e3a8-2dd6-462f-813e-0faacd057f0e\"}],\"state\":{\"visualization\":{\"layerId\":\"4568e3a8-2dd6-462f-813e-0faacd057f0e\",\"accessor\":\"93027f0c-fa12-43e0-9875-01152934a903\",\"layerType\":\"data\"},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[],\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"4568e3a8-2dd6-462f-813e-0faacd057f0e\":{\"columns\":{\"93027f0c-fa12-43e0-9875-01152934a903\":{\"label\":\"total cpu\",\"dataType\":\"number\",\"operationType\":\"min\",\"sourceField\":\"system.cpu.cores\",\"isBucketed\":false,\"scale\":\"ratio\",\"params\":{\"format\":{\"id\":\"percent\",\"params\":{\"decimals\":0}}},\"customLabel\":true}},\"columnOrder\":[\"93027f0c-fa12-43e0-9875-01152934a903\"],\"incompleteColumns\":{}}}}}}},\"enhancements\":{}}},{\"version\":\"7.17.3\",\"type\":\"lens\",\"gridData\":{\"x\":0,\"y\":15,\"w\":7,\"h\":15,\"i\":\"dd5df786-a713-4f21-aa05-9339a4724416\"},\"panelIndex\":\"dd5df786-a713-4f21-aa05-9339a4724416\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"visualizationType\":\"lnsMetric\",\"type\":\"lens\",\"references\":[{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-layer-0c621d69-846c-4df9-92ce-c5597afcfd04\"}],\"state\":{\"visualization\":{\"layerId\":\"0c621d69-846c-4df9-92ce-c5597afcfd04\",\"accessor\":\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946\",\"layerType\":\"data\"},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[],\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"0c621d69-846c-4df9-92ce-c5597afcfd04\":{\"columns\":{\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X0\":{\"label\":\"Part of used memory\",\"dataType\":\"number\",\"operationType\":\"average\",\"sourceField\":\"docker.memory.usage.total\",\"isBucketed\":false,\"scale\":\"ratio\",\"customLabel\":true},\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X1\":{\"label\":\"Part of used memory\",\"dataType\":\"number\",\"operationType\":\"unique_count\",\"scale\":\"ratio\",\"sourceField\":\"container.name\",\"isBucketed\":false,\"customLabel\":true},\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X2\":{\"label\":\"Part of used memory\",\"dataType\":\"number\",\"operationType\":\"math\",\"isBucketed\":false,\"scale\":\"ratio\",\"params\":{\"tinymathAst\":{\"type\":\"function\",\"name\":\"multiply\",\"args\":[\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X0\",\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X1\"],\"location\":{\"min\":0,\"max\":74},\"text\":\"multiply(average(docker.memory.usage.total), unique_count(container.name))\"}},\"references\":[\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X0\",\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X1\"],\"customLabel\":true},\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946\":{\"label\":\"used ram\",\"dataType\":\"number\",\"operationType\":\"formula\",\"isBucketed\":false,\"scale\":\"ratio\",\"params\":{\"formula\":\"multiply(average(docker.memory.usage.total), unique_count(container.name))\",\"isFormulaBroken\":false,\"format\":{\"id\":\"bytes\",\"params\":{\"decimals\":2}}},\"references\":[\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X2\"],\"customLabel\":true}},\"columnOrder\":[\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946\",\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X0\",\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X1\",\"fbbd81fd-91e3-4606-aa3d-5b74fa3ae946X2\"],\"incompleteColumns\":{}}}}}}},\"enhancements\":{}}},{\"version\":\"7.17.3\",\"type\":\"lens\",\"gridData\":{\"x\":7,\"y\":15,\"w\":7,\"h\":15,\"i\":\"5aa467b0-a082-4e6c-8b9a-9f53af478f75\"},\"panelIndex\":\"5aa467b0-a082-4e6c-8b9a-9f53af478f75\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"visualizationType\":\"lnsMetric\",\"type\":\"lens\",\"references\":[{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-layer-7caaf4b2-4345-4f01-a390-c39cc6fba761\"}],\"state\":{\"visualization\":{\"layerId\":\"7caaf4b2-4345-4f01-a390-c39cc6fba761\",\"accessor\":\"14c3995c-6629-4830-9555-cd789d118d51\",\"layerType\":\"data\"},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[],\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"7caaf4b2-4345-4f01-a390-c39cc6fba761\":{\"columns\":{\"14c3995c-6629-4830-9555-cd789d118d51\":{\"label\":\"total ram\",\"dataType\":\"number\",\"operationType\":\"average\",\"sourceField\":\"system.memory.total\",\"isBucketed\":false,\"scale\":\"ratio\",\"params\":{\"format\":{\"id\":\"bytes\",\"params\":{\"decimals\":2}}},\"customLabel\":true}},\"columnOrder\":[\"14c3995c-6629-4830-9555-cd789d118d51\"],\"incompleteColumns\":{}}}}}}},\"enhancements\":{}}},{\"version\":\"7.17.3\",\"type\":\"lens\",\"gridData\":{\"x\":14,\"y\":15,\"w\":24,\"h\":15,\"i\":\"dd9d1e23-c125-44ea-b1cf-71f3270d0b6e\"},\"panelIndex\":\"dd9d1e23-c125-44ea-b1cf-71f3270d0b6e\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"visualizationType\":\"lnsXY\",\"type\":\"lens\",\"references\":[{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-layer-31753532-a258-45e0-b430-849dde34cde7\"}],\"state\":{\"visualization\":{\"legend\":{\"isVisible\":true,\"position\":\"right\"},\"valueLabels\":\"hide\",\"fittingFunction\":\"None\",\"yLeftExtent\":{\"mode\":\"full\"},\"yRightExtent\":{\"mode\":\"full\"},\"axisTitlesVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"tickLabelsVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"labelsOrientation\":{\"x\":0,\"yLeft\":0,\"yRight\":0},\"gridlinesVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"preferredSeriesType\":\"area_stacked\",\"layers\":[{\"layerId\":\"31753532-a258-45e0-b430-849dde34cde7\",\"accessors\":[\"cd799e00-a159-494a-9e16-c3736143bdb8\"],\"position\":\"top\",\"seriesType\":\"area_stacked\",\"showGridlines\":false,\"layerType\":\"data\",\"splitAccessor\":\"c8fd3fac-bd0b-4cd3-bcc9-925cff071f05\",\"xAccessor\":\"eb98189f-8aa4-4d11-938f-e83c2d67daab\"}]},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[],\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"31753532-a258-45e0-b430-849dde34cde7\":{\"columns\":{\"c8fd3fac-bd0b-4cd3-bcc9-925cff071f05\":{\"label\":\"Top values of container.name\",\"dataType\":\"string\",\"operationType\":\"terms\",\"scale\":\"ordinal\",\"sourceField\":\"container.name\",\"isBucketed\":true,\"params\":{\"size\":50,\"orderBy\":{\"type\":\"column\",\"columnId\":\"cd799e00-a159-494a-9e16-c3736143bdb8\"},\"orderDirection\":\"desc\",\"otherBucket\":true,\"missingBucket\":false}},\"eb98189f-8aa4-4d11-938f-e83c2d67daab\":{\"label\":\"@timestamp\",\"dataType\":\"date\",\"operationType\":\"date_histogram\",\"sourceField\":\"@timestamp\",\"isBucketed\":true,\"scale\":\"interval\",\"params\":{\"interval\":\"auto\"}},\"cd799e00-a159-494a-9e16-c3736143bdb8\":{\"label\":\"Average ram\",\"dataType\":\"number\",\"operationType\":\"average\",\"sourceField\":\"docker.memory.usage.total\",\"isBucketed\":false,\"scale\":\"ratio\",\"params\":{\"format\":{\"id\":\"bytes\",\"params\":{\"decimals\":2}}},\"customLabel\":true}},\"columnOrder\":[\"c8fd3fac-bd0b-4cd3-bcc9-925cff071f05\",\"eb98189f-8aa4-4d11-938f-e83c2d67daab\",\"cd799e00-a159-494a-9e16-c3736143bdb8\"],\"incompleteColumns\":{}}}}}}},\"enhancements\":{}}},{\"version\":\"7.17.3\",\"type\":\"lens\",\"gridData\":{\"x\":38,\"y\":15,\"w\":10,\"h\":15,\"i\":\"a22403e7-2e77-4b65-ae3e-a5f9aeb180d7\"},\"panelIndex\":\"a22403e7-2e77-4b65-ae3e-a5f9aeb180d7\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"visualizationType\":\"lnsDatatable\",\"type\":\"lens\",\"references\":[{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"metricbeat\",\"name\":\"indexpattern-datasource-layer-abe8a3dd-1e88-4ac7-b681-cc6eda0aa106\"}],\"state\":{\"visualization\":{\"columns\":[{\"columnId\":\"9e7a530f-0c94-4c63-b07f-0d745c728b76\",\"isTransposed\":false},{\"columnId\":\"4b43e5aa-7d44-428b-9203-dc9977c5e97e\",\"isTransposed\":false}],\"layerId\":\"abe8a3dd-1e88-4ac7-b681-cc6eda0aa106\",\"layerType\":\"data\"},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[],\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"abe8a3dd-1e88-4ac7-b681-cc6eda0aa106\":{\"columns\":{\"9e7a530f-0c94-4c63-b07f-0d745c728b76\":{\"label\":\"container\",\"dataType\":\"string\",\"operationType\":\"terms\",\"scale\":\"ordinal\",\"sourceField\":\"container.name\",\"isBucketed\":true,\"params\":{\"size\":50,\"orderBy\":{\"type\":\"column\",\"columnId\":\"4b43e5aa-7d44-428b-9203-dc9977c5e97e\"},\"orderDirection\":\"desc\",\"otherBucket\":true,\"missingBucket\":false},\"customLabel\":true},\"4b43e5aa-7d44-428b-9203-dc9977c5e97e\":{\"label\":\"ram\",\"dataType\":\"number\",\"operationType\":\"average\",\"sourceField\":\"docker.memory.usage.total\",\"isBucketed\":false,\"scale\":\"ratio\",\"params\":{\"format\":{\"id\":\"bytes\",\"params\":{\"decimals\":2}}},\"customLabel\":true}},\"columnOrder\":[\"9e7a530f-0c94-4c63-b07f-0d745c728b76\",\"4b43e5aa-7d44-428b-9203-dc9977c5e97e\"],\"incompleteColumns\":{}}}}}}},\"enhancements\":{}}}]",
+        "optionsJSON": "{\"useMargins\":true,\"syncColors\":false,\"hidePanelTitles\":false}",
+        "version": 1,
+        "timeRestore": false,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "fef55d92-23ca-4b45-ac86-96cea19cfdfb:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "fef55d92-23ca-4b45-ac86-96cea19cfdfb:indexpattern-datasource-layer-ccb2d247-4a37-418e-b9d1-cc5acdf90843"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "d218eaea-3294-4f00-826a-dc4530b03fb0:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "d218eaea-3294-4f00-826a-dc4530b03fb0:indexpattern-datasource-layer-7a36fdc4-48a7-4331-a93d-fec5f22b109b"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "e46d5f7c-aeb0-4393-8764-69892861f96d:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "e46d5f7c-aeb0-4393-8764-69892861f96d:indexpattern-datasource-layer-f93f8442-af89-4545-a9fd-f35dd5b0ab6c"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "731da10b-0263-4035-9af6-4dfa2bac0191:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "731da10b-0263-4035-9af6-4dfa2bac0191:indexpattern-datasource-layer-4568e3a8-2dd6-462f-813e-0faacd057f0e"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "dd5df786-a713-4f21-aa05-9339a4724416:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "dd5df786-a713-4f21-aa05-9339a4724416:indexpattern-datasource-layer-0c621d69-846c-4df9-92ce-c5597afcfd04"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "5aa467b0-a082-4e6c-8b9a-9f53af478f75:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "5aa467b0-a082-4e6c-8b9a-9f53af478f75:indexpattern-datasource-layer-7caaf4b2-4345-4f01-a390-c39cc6fba761"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "dd9d1e23-c125-44ea-b1cf-71f3270d0b6e:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "dd9d1e23-c125-44ea-b1cf-71f3270d0b6e:indexpattern-datasource-layer-31753532-a258-45e0-b430-849dde34cde7"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "a22403e7-2e77-4b65-ae3e-a5f9aeb180d7:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "metricbeat",
+          "name": "a22403e7-2e77-4b65-ae3e-a5f9aeb180d7:indexpattern-datasource-layer-abe8a3dd-1e88-4ac7-b681-cc6eda0aa106"
+        }
+      ],
+      "migrationVersion": {
+        "dashboard": "7.17.3"
+      },
+      "coreMigrationVersion": "7.17.3"
+    },
+    {
+      "id": "metricbeat",
+      "type": "index-pattern",
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2022-09-02T13:24:44.244Z",
+      "version": "WzE2LDFd",
+      "attributes": {
+        "fieldAttrs": "{}",
+        "title": "metricbeat-*",
+        "timeFieldName": "@timestamp",
+        "fields": "[]",
+        "typeMeta": "{}",
+        "runtimeFieldMap": "{}"
+      },
+      "references": [],
+      "migrationVersion": {
+        "index-pattern": "7.11.0"
+      },
+      "coreMigrationVersion": "7.17.3"
+    }
+  ]
+}

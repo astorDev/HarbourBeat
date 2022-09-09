@@ -1,0 +1,8 @@
+
+GET http://localhost:5650/about
+
+###
+GET http://localhost:5650/dashboards
+
+###
+PUT http://localhost:5650/dashboards/containers
