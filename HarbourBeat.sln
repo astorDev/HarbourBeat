@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kibana.Protocol", "Kibana.Protocol\Kibana.Protocol.csproj", "{32CE8BFC-6ABC-4354-8FAF-B414D0B0F107}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarbourBeat.WebApi", "HarbourBeat.WebApi\HarbourBeat.WebApi.csproj", "{E8E56F6E-41D7-4B1C-9A57-7EC63EE8730D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarbourBeat.Tests", "HarbourBeat.Tests\HarbourBeat.Tests.csproj", "{67BF5D8A-8FA6-4939-9EAC-0C3004CC5CE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarbourBeat.Protocol", "HarbourBeat.Protocol\HarbourBeat.Protocol.csproj", "{AE41C27C-2ADF-44FA-8277-001F1208AEBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarbourBeat.Background.Service", "HarbourBeat.Background.Service\HarbourBeat.Background.Service.csproj", "{F05EB98F-4DAE-438A-A21D-9AAE6139EF34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarbourBeat.Background.DebugWebApi", "HarbourBeat.Background.DebugWebApi\HarbourBeat.Background.DebugWebApi.csproj", "{AE1CDBE0-0B58-430D-B0A9-D0AF13E7B38E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ci", "ci", "{63800EE2-7391-4336-A894-2CFF8CD70A4E}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32CE8BFC-6ABC-4354-8FAF-B414D0B0F107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32CE8BFC-6ABC-4354-8FAF-B414D0B0F107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32CE8BFC-6ABC-4354-8FAF-B414D0B0F107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32CE8BFC-6ABC-4354-8FAF-B414D0B0F107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E56F6E-41D7-4B1C-9A57-7EC63EE8730D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E56F6E-41D7-4B1C-9A57-7EC63EE8730D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E56F6E-41D7-4B1C-9A57-7EC63EE8730D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E56F6E-41D7-4B1C-9A57-7EC63EE8730D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67BF5D8A-8FA6-4939-9EAC-0C3004CC5CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67BF5D8A-8FA6-4939-9EAC-0C3004CC5CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67BF5D8A-8FA6-4939-9EAC-0C3004CC5CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67BF5D8A-8FA6-4939-9EAC-0C3004CC5CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE41C27C-2ADF-44FA-8277-001F1208AEBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE41C27C-2ADF-44FA-8277-001F1208AEBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE41C27C-2ADF-44FA-8277-001F1208AEBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE41C27C-2ADF-44FA-8277-001F1208AEBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F05EB98F-4DAE-438A-A21D-9AAE6139EF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F05EB98F-4DAE-438A-A21D-9AAE6139EF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F05EB98F-4DAE-438A-A21D-9AAE6139EF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F05EB98F-4DAE-438A-A21D-9AAE6139EF34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1CDBE0-0B58-430D-B0A9-D0AF13E7B38E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1CDBE0-0B58-430D-B0A9-D0AF13E7B38E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1CDBE0-0B58-430D-B0A9-D0AF13E7B38E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1CDBE0-0B58-430D-B0A9-D0AF13E7B38E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

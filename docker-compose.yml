@@ -1,0 +1,74 @@
+version: '3.9'
+
+volumes:
+  elastic-data:
+  metricbeat-data:
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.3
+    restart: always
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - elastic-data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: '2G'
+
+  kibana:
+    restart: always
+    image: docker.elastic.co/kibana/kibana:7.17.3
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: '500M'
+
+  beat:
+    restart: always
+    image: vosarat/harbourbeat:1.0
+    build: 
+      context: .
+      dockerfile: harbourbeat.Dockerfile
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    volumes:
+      - metricbeat-data:/usr/share/metricbeat/data
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: '500M'
+
+  webapi:
+    restart: always
+    image: vosarat/harbourbeat-webapi:1.0
+    labels:
+      - family=nist
+    build:
+      context: .
+      dockerfile: HarbourBeat.WebApi/Dockerfile
+    environment:
+      KIBANA_URL: http://kibana:5601
+    ports:
+      - "5610:80"
+
+  service:
+    restart: always
+    image: vosarat/harbourbeat-service:1.0
+    build: 
+      context: .
+      dockerfile: HarbourBeat.Background.Service/Dockerfile
+    environment:
+      - HARBOURBEAT_API_URL=http://webapi
